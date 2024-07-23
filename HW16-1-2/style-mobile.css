@@ -1,0 +1,11 @@
+@media screen and (max-width: 480px) {
+    .Boss{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr 1fr;
+        grid-template-areas:
+        'header header header'
+        'main main main'
+        'class1 class2 class3'
+        'aside aside aside';
+    }
+}

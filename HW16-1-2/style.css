@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Boss{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    'header header header header'
+    'main main main aside'
+    'class1 class2 class3 aside';
+    gap: 20px;
+}
+header, main, aside, .class1, .class2, .class3{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+}
+header{
+    grid-area: header;
+}
+main{
+    grid-area: main;
+}
+.class1{
+    grid-area: class1;
+}
+.class2{
+    grid-area: class2;
+}
+.class3{
+    grid-area: class3;
+}
+aside{
+    grid-area: aside;
+}

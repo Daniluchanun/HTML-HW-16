@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW16.1.1</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .grid{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas:
+        'section section'
+        'main aside';
+        gap: 20px;
+      }
+      section, main, aside{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid;
+      }
+      section{
+        grid-area: section;
+      }
+      main{
+        grid-area: main;
+      }
+      aside{
+        grid-area: aside;
+      }
+      @media screen and (max-width: 480px) {
+        .grid{
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 3fr 1fr;
+          grid-template-areas:
+          'section'
+          'main'
+          'aside';
+        }
+      }
+    </style>
+</head>
+<body>
+<div class="grid">
+    <section><span>A</span></section>
+    <main><span>B</span></main>
+    <aside><span>C</span></aside>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HW16.2.4</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body>div{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 10fr 9fr 9fr 9fr 10fr;
+        grid-template-areas:
+        'header header'
+        'cont1 spam'
+        'cont2 spam'
+        'cont3 spam'
+        'footer footer';
+      }
+      header, .cont1, .cont2, .cont3, .spam, footer{
+        display: grid;
+      }
+      header{
+        background: #8D8484;
+        grid-area: header;
+      }
+      .cont1{
+        grid-area: cont1;
+        background: #776969;
+      }
+      .cont2{
+        grid-area: cont2;
+        background: #643030;
+      }
+      .cont3{
+        grid-area: cont3;
+        background: #441818;
+      }
+      .spam{
+        grid-area: spam;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .spam-1{
+        height: 50%;
+        width: 100%;
+        background: #937575;
+      }
+      .spam-2{
+        height: 50%;
+        width: 100%;
+        background: #644C4C;
+      }
+      footer{
+        grid-area: footer;
+        background: #BDBDBD;
+      }
+    </style>
+</head>
+<body>
+<div>
+  <header></header>
+  <div class="cont1"></div>
+  <div class="cont2"></div>
+  <div class="cont3"></div>
+  <div class="spam">
+    <div class="spam-1"></div>
+    <div class="spam-2"></div>
+  </div>
+  <footer></footer>
+</div>
+</body>
+</html>
